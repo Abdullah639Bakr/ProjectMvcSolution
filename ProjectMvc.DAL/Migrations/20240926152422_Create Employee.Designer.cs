@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectMvc.DAL.Contexts;
 
@@ -11,9 +12,11 @@ using ProjectMvc.DAL.Contexts;
 namespace ProjectMvc.DAL.Migrations
 {
     [DbContext(typeof(MvcProjectContext))]
-    partial class MvcProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20240926152422_Create Employee")]
+    partial class CreateEmployee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
