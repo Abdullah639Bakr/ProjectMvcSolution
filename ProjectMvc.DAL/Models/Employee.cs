@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ProjectMvc.DAL.Models
 {
-    public class Employee
+    public class Employee : BaseEntity
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
 
         [Required(ErrorMessage ="Name Is Required")]
         public string Name { get; set; }

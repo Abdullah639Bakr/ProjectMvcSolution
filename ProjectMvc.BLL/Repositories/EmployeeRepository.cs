@@ -10,41 +10,13 @@ using System.Threading.Tasks;
 
 namespace ProjectMvc.BLL.Repositories
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class EmployeeRepository : GenericRepository<Employee> ,IEmployeeRepository
     {
-        private readonly MvcProjectContext _dbcontext;
 
-        public EmployeeRepository(MvcProjectContext dbcontext)
+        public EmployeeRepository(MvcProjectContext dbcontext) :base(dbcontext)
         {
-            _dbcontext = dbcontext;
         }
 
-        public int Add(Employee employee)
-        {
-            _dbcontext.Employees.Add(employee);
-            return _dbcontext.SaveChanges();
-        }
-
-        public int Delete(Employee employee)
-        {
-            _dbcontext.Remove(employee);
-            return _dbcontext.SaveChanges();
-        }
-
-        public IEnumerable<Employee> GetAll()
-        {
-            return _dbcontext.Employees.ToList();
-        }
-
-        public Employee GetById(int id)
-        {
-            return _dbcontext.Employees.Find(id);
-        }
-
-        public int Update(Employee employee)
-        {
-            _dbcontext.Update(employee);
-            return _dbcontext.SaveChanges();
-        }
+       
     }
 }
