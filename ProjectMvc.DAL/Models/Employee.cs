@@ -19,6 +19,8 @@ namespace ProjectMvc.DAL.Models
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Salary Is Required")]
+        [DataType(DataType.Currency)]
+
         public decimal Salary { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

@@ -1,0 +1,82 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Employee @Model.Name Details</h1>
+
+<br />
+
+<br />
+
+<div class="form-group">
+    <label class="form-label" asp-for="Name"></label>
+    <input class="form-control" asp-for="Name" readonly />
+</div>
+<br />
+
+<div class="form-group">
+    <label class="form-label" asp-for="Age"></label>
+    <input class="form-control" asp-for="Age" readonly />
+</div>
+
+<br />
+
+
+<div class="form-group">
+    <label class="form-label" asp-for="Address"></label>
+    <input class="form-control" asp-for="Address" readonly />
+</div>
+
+<br />
+
+
+<div class="form-group">
+    <label class="form-label" asp-for="Email"></label>
+    <input class="form-control" asp-for="Email" readonly />
+</div>
+
+<br />
+
+
+<div class="form-group">
+    <label class="form-label" asp-for="PhoneNumber"></label>
+    <input class="form-control" asp-for="PhoneNumber" readonly />
+</div>
+
+
+<br />
+
+
+<div class="form-group">
+    <label class="form-label" asp-for="Salary"></label>
+    <input class="form-control" asp-for="Salary" readonly />
+</div>
+
+
+<br />
+
+
+<div class="form-group">
+    <label class="form-check" asp-for="IsActive"></label>
+    <input class="form-check" asp-for="IsActive" readonly />
+</div>
+
+<br />
+
+
+<div class="form-group">
+    <label class="form-label" asp-for="HiringDate"></label>
+    <input asp-for="HiringDate" class="form-control" readonly />
+</div>
+
+
+<br />
+<br />
+<center>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Eidt</a>
+    <a asp-action="Index" class="btn btn-outline-secondary">Back To List</a>
+</center>
+
+
+
