@@ -56,6 +56,7 @@ namespace ProjectMvc.PL.Controllers
             //var department = _departmentRepository.GetById(id.Value);
             //if (department is null)
             //    return NotFound();
+
             return Details(id, "Edit");
         }
 
