@@ -42,10 +42,9 @@
                     <td>@Html.DisplayFor(M=>empl.Salary)</td>
                     <td>@Html.DisplayFor(M=>empl.IsActive)</td>
                     <td>@empl.HiringDate</td>
-                    <td><a class="btn btn-success" asp-action="Details" asp-route-id="@empl.Id"><i class="fas fa-eye"></i>Details</a></td>
-                    <td><a class="btn btn-primary" asp-action="Edit" asp-route-id="@empl.Id"><i class="fas fa-edit"></i>Update</a></td>
-                    <td><a class="btn btn-danger" asp-action="Delete" asp-route-id="@empl.Id"><i class="fas fa-remove"></i>Delete</a></td>
-                </tr>
+                    <partial name="_ButtonEmployeeDepartmentPartialView" model="@empl.Id" />
+
+               </tr>
             }
         </tbody>
     </table>
